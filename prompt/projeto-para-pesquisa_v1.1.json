@@ -1,0 +1,35 @@
+{
+  "ContextBlock": {
+    "actor-id": "Chat-GP-Projeto",
+    "target-id": "Chat-GP-Pesquisa",
+    "phase": "Fase 0 - Setup Ontológico",
+    "version": "v1.1-PHD",
+    "timestamp": "2025-06-09T15:00:00Z"
+  },
+  "GoalBlock": {
+    "outcome": "Definir classes semânticas iniciais em OWL/RDF para domínios Clínico e Técnico",
+    "justification": "Fundamentar meta-ontologia que regerá todos os prompts inter-chat"
+  },
+  "ScopeBlock": {
+    "nominal": ["Clínico", "Técnico"],
+    "variantes": ["Subdomínios (Depressão, Ansiedade)", "Edge cases (Dados ausentes)"]
+  },
+  "NormBlock": {
+    "LGPD": "Art. 7",
+    "FIHR": "Estrutura RDF",
+    "SNOMED": "Conceitos de SNOMED CT"
+  },
+  "IOBlock": {
+    "format": "OWL/RDF",
+    "schema": "https://yourdomain.org/ontologia/schema.owl"
+  },
+  "FlowBlock": {
+    "onSuccess": "Enviar resposta para Chat-GP-ML",
+    "onHold": "Aguardar revisão de peer-review multidisciplinar",
+    "SLA": "12h"
+  },
+  "MetaBlock": {
+    "peer-review": ["Chat-GP-ML","Chat-GP-Dados","Chat-GP-Desenvolvimento"],
+    "compliance-check": true
+  }
+}
