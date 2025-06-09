@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Prompt Inter-Chat",
+  "type": "object",
+  "required": ["ContextBlock","GoalBlock","FlowBlock"],
+  "properties": {
+    "ContextBlock": {
+      "type": "object",
+      "required": ["actor-id","target-id","version","timestamp"],
+      "properties": {
+        "actor-id": { "type": "string" },
+        "target-id": { "type": "string" },
+        "version": { "type": "string" },
+        "timestamp": { "type": "string","format":"date-time" }
+      }
+    },
+    "GoalBlock": { "type":"object" },
+    "FlowBlock": {
+      "type":"object",
+      "required":["onSuccess","onHold","SLA"],
+      "properties": {
+        "onSuccess": { "type":"string" },
+        "onHold": { "type":"string" },
+        "SLA": { "type":"string" }
+      }
+    }
+  }
+}
